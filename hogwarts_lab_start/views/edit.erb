@@ -1,0 +1,27 @@
+<form action="/students/<%= @student.id%>" method="post" >
+
+<fieldset>
+  <label for="first_name_field">First Name:</label>
+  <input type="text" name="first_name" id="first_name_field" value="<%= @student.first_name%>"/>
+
+  <label for="last_name_field">Last Name:</label>
+  <input type="text" name="last_name" id="last_name_field" value="<%= @student.last_name%>"/>
+
+  <label for="age_field">Age:</label>
+  <input type="text" name="age" id="age_field" value="<%= @student.age%>"/>
+
+</fieldset>
+
+<fieldset>
+  <label for="house_select">Select House:</label>
+  <select name="house_id" id="house_select">
+    <option value="1" <%= "selected" if @student.house_id == "1"%>>Gryffindor</option>
+    <option value="2" <%= "selected" if @student.house_id == "2"%>>Hufflepuff</option>
+    <option value="3" <%= "selected" if @student.house_id == "3"%>>Ravenclaw</option>
+    <option value="4" <%= "selected" if @student.house_id == "4"%>>Slytherin</option>
+  </select>
+</fieldset>
+
+  <input type="submit" value="Enrol Student">
+
+</form>
